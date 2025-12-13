@@ -36,21 +36,22 @@ const Sponsors = () => {
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          {sponsors.map((sponsor, index) => (
-            <motion.div
-              key={sponsor.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center hover:shadow-lg transition-shadow"
-            >
-              <div className="w-16 h-16 rounded-2xl bg-primary-light flex items-center justify-center text-primary font-bold text-xl mb-3">
-                S{sponsor.id}
-              </div>
-              <span className="text-muted-foreground text-sm">{sponsor.name}</span>
-            </motion.div>
-          ))}
+          {/* {sponsors.map((sponsor, index) => ( */}
+          {/*   <motion.div */}
+          {/*     key={sponsor.id} */}
+          {/*     initial={{ opacity: 0, y: 20 }} */}
+          {/*     whileInView={{ opacity: 1, y: 0 }} */}
+          {/*     viewport={{ once: true }} */}
+          {/*     transition={{ duration: 0.4, delay: index * 0.05 }} */}
+          {/*     className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center hover:shadow-lg transition-shadow" */}
+          {/*   > */}
+          {/*     <div className="w-16 h-16 rounded-2xl bg-primary-light flex items-center justify-center text-primary font-bold text-xl mb-3"> */}
+          {/*       S{sponsor.id} */}
+          {/*     </div> */}
+          {/*     <span className="text-muted-foreground text-sm">{sponsor.name}</span> */}
+          {/*   </motion.div> */}
+          {/* ))} */}
+          <h1 className="text-4xl w-full text-center">Coming Soon</h1>
         </div>
 
         <motion.div
@@ -66,10 +67,10 @@ const Sponsors = () => {
           <p className="text-muted-foreground">
             Contact us at{" "}
             <a
-              href="mailto:sponsors@hultprize.in"
+              href="mailto:iste.nith.ac.in"
               className="text-primary hover:underline font-medium"
             >
-              sponsors@hultprize.in
+              iste.nith.ac.in
             </a>{" "}
             to explore partnership opportunities.
           </p>

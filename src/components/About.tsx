@@ -6,27 +6,28 @@ const features = [
     icon: Trophy,
     title: "Global Competition",
     description:
-      "Compete with 200,000+ students across 150+ countries to showcase your innovative social impact solutions.",
+    "Compete with 200,000+ students across 150+ countries to showcase your innovative social impact solutions.",
   },
   {
     icon: Users,
     title: "Build Your Team",
     description:
-      "Form teams, network with peers, and collaborate with mentors from leading organizations worldwide.",
+    "Form teams, network with peers, and collaborate with mentors from leading organizations worldwide.",
   },
   {
     icon: BookOpen,
     title: "Win Big Prizes",
     description:
-      "Win up to $1 million in funding, accelerator spots, and global recognition for your social enterprise.",
+    "Win up to $1 million in funding, accelerator spots, and global recognition for your social enterprise.",
   },
 ];
 
 const benefits = [
   "Access to industry experts and mentors",
-  "Networking opportunities with global leaders",
-  "Real-world entrepreneurship experience",
-  "Recognition on an international platform",
+  "Networking with innovators worldwide",
+  "Funding and investment opportunities",
+  "Media exposure and brand building",
+  "Prizes worth 30k+",
 ];
 
 const About = () => {
@@ -48,7 +49,7 @@ const About = () => {
             About Hult Prize
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hult Prize is the world's largest student-run social entrepreneurship competition
+            The Hult Prize is the world's largest student startup competition focused on social entrepreneurship, aimed at creating measurable social and environmental impact. It brings together young innovators from over 130 countries, with tens of thousands of participants annually, offering not only funding but also access to mentorship, investor networks, global visibility, and a lifelong community of changemakers. The final winning team is awarded a $1 million prize to launch their social venture.
           </p>
         </motion.div>
 

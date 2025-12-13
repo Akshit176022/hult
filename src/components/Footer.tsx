@@ -9,17 +9,15 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  { name: "Facebook", href: "#" },
-  { name: "Instagram", href: "#" },
-  { name: "LinkedIn", href: "#" },
-  { name: "Twitter", href: "#" },
+  { name: "Instagram", href: "https://www.instagram.com/teamistenith" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/iste-nith" },
 ];
 
 const Footer = () => {
   return (
     <footer className="bg-footer text-footer-foreground py-16">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-15 mb-12">
           <div>
             <h3 className="text-xl font-bold text-primary mb-4">Hult Prize</h3>
             <p className="text-sm leading-relaxed">
@@ -58,21 +56,6 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-background mb-4">Newsletter</h4>
-            <p className="text-sm mb-4">Stay updated with latest news and updates.</p>
-            <div className="flex gap-2">
-              <Input
-                type="email"
-                placeholder="Your email"
-                className="bg-transparent border-footer-foreground/30 text-footer-foreground placeholder:text-footer-foreground/50 rounded-lg"
-              />
-              <Button size="sm" className="rounded-lg shrink-0">
-                Subscribe
-              </Button>
-            </div>
           </div>
         </div>
 

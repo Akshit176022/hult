@@ -22,8 +22,8 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight"
         >
-          Transform Your Ideas Into{" "}
-          <span className="text-primary">Global Impact</span>
+          ISTE Brings To You <br/>
+          <span className="text-primary">HULT PRIZE</span>
         </motion.h1>
 
         <motion.p
@@ -42,18 +42,9 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           <Button size="lg" className="text-lg px-10 py-6 rounded-full">
-            Register Now
+            <a href="https://share.google/GUkDgJO6HBOzxUYLb">Register Now</a>
           </Button>
         </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="mt-6 text-sm text-muted-foreground"
-        >
-          Limited spots available • Early bird registration open
-        </motion.p>
       </div>
     </section>
   );

@@ -7,20 +7,20 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "info@hultprize-nith.com",
-    href: "mailto:info@hultprize-nith.com",
+    value: "iste.nith.ac.in",
+    href: "mailto:iste.nith.ac.in",
   },
   {
     icon: Phone,
     title: "Phone",
-    value: "+91 98765 43210",
-    href: "tel:+919876543210",
+    value: "+91 93683 05664",
+    href: "tel:+919368305664",
   },
   {
     icon: MapPin,
     title: "Location",
     value: "National Institute of Technology Hamirpur, Himachal Pradesh, India",
-    href: null,
+    href: "https://www.google.com/maps/place/National+Institute+of+Technology,+Hamirpur/@31.7084291,76.5273526,17z/data=!3m1!4b1!4m6!3m5!1s0x3904d5487e12c4a1:0x395f92d3a202a7d0!8m2!3d31.7084291!4d76.5273526!16zL20vMGNybnJ4?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D",
   },
 ];
 
@@ -45,7 +45,8 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+
+        <div className="grid place-items-center w-full mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -59,43 +60,24 @@ const Contact = () => {
                   <item.icon className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                  <h4 className="font-semibold text-foreground mb-1">
+                    {item.title}
+                  </h4>
                   {item.href ? (
-                    <a href={item.href} className="text-primary hover:underline">
+                    <a
+                      href={item.href}
+                      className="text-primary hover:underline"
+                    >
                       {item.value}
                     </a>
                   ) : (
-                    <p className="text-muted-foreground">{item.value}</p>
-                  )}
+                      <p className="text-muted-foreground">
+                        {item.value}
+                      </p>
+                    )}
                 </div>
               </div>
             ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-card rounded-3xl p-8 shadow-lg border border-border"
-          >
-            <h3 className="text-2xl font-bold text-foreground mb-6">Quick Registration</h3>
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Email Address
-                </label>
-                <Input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="rounded-xl h-12"
-                />
-              </div>
-              <Button className="w-full rounded-xl h-12 text-base">Register Now</Button>
-              <p className="text-xs text-muted-foreground text-center">
-                By registering, you agree to our Code of Conduct and terms of participation.
-              </p>
-            </form>
           </motion.div>
         </div>
       </div>
