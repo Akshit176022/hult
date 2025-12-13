@@ -10,15 +10,12 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useIsMobile();
 
   // Close mobile menu when switching to desktop
   useEffect(() => {
-    if (!isMobile) {
-      setIsOpen(false);
-    }
+    if (!isMobile) setIsOpen(false);
   }, [isMobile]);
 
   return (
@@ -28,88 +25,94 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className={"fixed top-0 left-0 right-0 z-[60] transition-all duration-300 bg-background/95 backdrop-blur-md shadow-sm"}
+        className="fixed top-0 left-0 right-0 z-[60] bg-background/95 backdrop-blur-md shadow-sm"
       >
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between relative">
+          {/* LEFT: Logo */}
+          <div className="flex items-center gap-3">
+            {/* Mobile-only favicon */}
+            <img
+              src="favicon.webp"
+              alt="Hult Logo"
+              className="w-8 h-8 object-contain md:hidden"
+            />
 
-<div className="flex items-center gap-5">
-  {/* Text */}
-  <a href="#" className="text-2xl font-bold text-primary tracking-tight">
-    HULT PRIZE
-  </a>
-
-  {/* Images + Divider */}
-  <div className="flex items-center gap-3">
-    {/* Image 1 */}
-    <div className="w-8 h-8 md:w-10 md:h-10">
-      <img
-        src="favicon.webp"
-        alt="Logo 1"
-        className="w-full h-full object-contain"
-      />
-    </div>
-
-    {/* Divider */}
-    <div className="h-8 w-px bg-border" />
-
-    {/* Image 2 */}
-    <div className="w-8 h-8 md:w-10 md:h-10">
-      <img
-        src="iste.webp"
-        alt="Logo 2"
-        className="w-full h-full object-contain"
-      />
-    </div>
-  </div>
-</div>
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-foreground/80 hover:text-foreground font-medium transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
+            <a
+              href="#"
+              className="text-2xl font-bold text-primary tracking-tight"
+            >
+              HULT PRIZE
+            </a>
           </div>
 
-          {/* Hamburger / Close Button */}
-          <button
-            className={`md:hidden z-[70] ${
-              scrolled ? "text-foreground" : "text-black dark:text-white"
-            }`}
-            onClick={() => setIsOpen((prev) => !prev)}
-            aria-label="Toggle menu"
-            aria-expanded={isOpen}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 transition-transform duration-200"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          {/* CENTER: Logos + Divider (desktop only) */}
+          <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-3">
+            <div className="w-10 h-10">
+              <img
+                src="favicon.webp"
+                alt="Logo 1"
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+            <div className="h-8 w-px bg-border" />
+
+            <div className="w-10 h-10">
+              <img
+                src="iste.webp"
+                alt="Logo 2"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+
+          {/* RIGHT: Desktop nav + mobile hamburger */}
+          <div className="flex items-center gap-8">
+            {/* Desktop Nav */}
+            <div className="hidden md:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-foreground/80 hover:text-foreground font-medium transition-colors"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+
+            {/* Hamburger / Close */}
+            <button
+              className="md:hidden z-[70] text-black dark:text-white"
+              onClick={() => setIsOpen((prev) => !prev)}
+              aria-label="Toggle menu"
+              aria-expanded={isOpen}
             >
-              {isOpen ? (
-                // ✕ Close icon
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                // ☰ Hamburger icon
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
       </motion.nav>
 
@@ -126,7 +129,7 @@ const Navbar = () => {
               className="fixed inset-0 bg-black z-[40] md:hidden"
             />
 
-            {/* Slide-down Menu */}
+            {/* Menu */}
             <motion.div
               initial={{ y: "-100%" }}
               animate={{ y: 0 }}
