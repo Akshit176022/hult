@@ -31,10 +31,37 @@ const Navbar = () => {
         className={"fixed top-0 left-0 right-0 z-[60] transition-all duration-300 bg-background/95 backdrop-blur-md shadow-sm"}
       >
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#" className="text-2xl font-bold text-primary tracking-tight">
-            HULT PRIZE
-          </a>
 
+<div className="flex items-center gap-5">
+  {/* Text */}
+  <a href="#" className="text-2xl font-bold text-primary tracking-tight">
+    HULT PRIZE
+  </a>
+
+  {/* Images + Divider */}
+  <div className="flex items-center gap-3">
+    {/* Image 1 */}
+    <div className="w-8 h-8 md:w-10 md:h-10">
+      <img
+        src="favicon.webp"
+        alt="Logo 1"
+        className="w-full h-full object-contain"
+      />
+    </div>
+
+    {/* Divider */}
+    <div className="h-8 w-px bg-border" />
+
+    {/* Image 2 */}
+    <div className="w-8 h-8 md:w-10 md:h-10">
+      <img
+        src="iste.webp"
+        alt="Logo 2"
+        className="w-full h-full object-contain"
+      />
+    </div>
+  </div>
+</div>
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
