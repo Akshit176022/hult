@@ -4,13 +4,17 @@ import { cn } from "@/lib/utils";
 
 // Placeholder images - replace with actual event images
 const images = [
-  "gallery/01.JPG",  
-  "gallery/03.JPG",  
-  "gallery/04.JPG",  
-  "gallery/05.JPG",  
-  "gallery/06.JPG",  
+  "gallery/01.JPG",
+  "gallery/02.JPG",
+  "gallery/03.JPG",
+  "gallery/04.JPG",
+  "gallery/05.JPG",
+  "gallery/06.JPG",
   "gallery/07.JPG",
   "gallery/08.JPG",
+  "gallery/09.JPG",
+  "gallery/10.JPG",
+  "gallery/11.JPG",
 ];
 
 const EventGallery = () => {

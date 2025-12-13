@@ -30,30 +30,28 @@ const Sponsors = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
             Our Sponsors
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Proudly supported by leading organizations and institutions
-          </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          {/* {sponsors.map((sponsor, index) => ( */}
-          {/*   <motion.div */}
-          {/*     key={sponsor.id} */}
-          {/*     initial={{ opacity: 0, y: 20 }} */}
-          {/*     whileInView={{ opacity: 1, y: 0 }} */}
-          {/*     viewport={{ once: true }} */}
-          {/*     transition={{ duration: 0.4, delay: index * 0.05 }} */}
-          {/*     className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center hover:shadow-lg transition-shadow" */}
-          {/*   > */}
-          {/*     <div className="w-16 h-16 rounded-2xl bg-primary-light flex items-center justify-center text-primary font-bold text-xl mb-3"> */}
-          {/*       S{sponsor.id} */}
-          {/*     </div> */}
-          {/*     <span className="text-muted-foreground text-sm">{sponsor.name}</span> */}
-          {/*   </motion.div> */}
-          {/* ))} */}
-          <h1 className="text-4xl w-full text-center">Coming Soon</h1>
-        </div>
-
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"> */}
+        {/*   {sponsors.map((sponsor, index) => ( */}
+        {/*     <motion.div */}
+        {/*       key={sponsor.id} */}
+        {/*       initial={{ opacity: 0, y: 20 }} */}
+        {/*       whileInView={{ opacity: 1, y: 0 }} */}
+        {/*       viewport={{ once: true }} */}
+        {/*       transition={{ duration: 0.4, delay: index * 0.05 }} */}
+        {/*       className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center hover:shadow-lg transition-shadow" */}
+        {/*     > */}
+        {/*       <div className="w-16 h-16 rounded-2xl bg-primary-light flex items-center justify-center text-primary font-bold text-xl mb-3"> */}
+        {/*         S{sponsor.id} */}
+        {/*       </div> */}
+        {/*       <span className="text-muted-foreground text-sm">{sponsor.name}</span> */}
+        {/*     </motion.div> */}
+        {/*   ))} */}
+        {/*   <h1 className="text-4xl font-bold w-full text-center">Coming Soon</h1> */}
+        {/* </div> */}
+        {/**/}
+        <h1 className="text-2xl md:text-4xl font-bold w-full mb-15 text-neutral-700 text-center">Coming Soon...</h1>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -30,7 +30,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
+          className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-10"
         >
           Join the world's largest student social entrepreneurship competition and turn
           your vision into reality.

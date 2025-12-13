@@ -43,47 +43,62 @@ const CodeOfConduct = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 mb-12">
+          {/* DO's */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="flex flex-col items-center text-center"
           >
+            {/* Heading */}
             <div className="flex items-center gap-3 mb-6">
               <CheckCircle2 className="w-8 h-8 text-success" />
-              <h3 className="text-2xl font-bold text-foreground">Do's</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground">Do&apos;s</h3>
             </div>
-            <ul className="space-y-4">
+
+            {/* List */}
+            <ul className="flex flex-col gap-4 max-w-md mx-auto">
               {dos.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
+                <li
+                  key={index}
+                  className="flex items-start gap-3 text-left"
+                >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                  <span className="text-muted-foreground">{item}</span>
+                  <span className="text-muted-foreground md:text-lg">{item}</span>
                 </li>
               ))}
             </ul>
           </motion.div>
 
+          {/* DON'Ts */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="flex flex-col items-center text-center"
           >
+            {/* Heading */}
             <div className="flex items-center gap-3 mb-6">
               <XCircle className="w-8 h-8 text-destructive" />
-              <h3 className="text-2xl font-bold text-foreground">Don'ts</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground">Don&apos;ts</h3>
             </div>
-            <ul className="space-y-4">
+
+            {/* List */}
+            <ul className="flex flex-col gap-4 max-w-md mx-auto">
               {donts.map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
+                <li
+                  key={index}
+                  className="flex items-start gap-3 text-left"
+                >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                  <span className="text-muted-foreground">{item}</span>
+                  <span className="text-muted-foreground md:text-lg">{item}</span>
                 </li>
               ))}
             </ul>
           </motion.div>
         </div>
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

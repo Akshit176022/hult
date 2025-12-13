@@ -8,7 +8,7 @@ const quickLinks = [
   { name: "Contact", href: "#contact" },
 ];
 
-const socialLinks = [
+const socialsLinks = [
   { name: "Instagram", href: "https://www.instagram.com/teamistenith" },
   { name: "LinkedIn", href: "https://www.linkedin.com/company/iste-nith" },
 ];
@@ -43,9 +43,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold text-background mb-4">Social</h4>
+            <h4 className="font-semibold text-background mb-4">Socials</h4>
             <ul className="space-y-3">
-              {socialLinks.map((link) => (
+              {socialsLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
@@ -59,18 +59,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-footer-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm">
-            © 2024 Hult Prize at NIT Hamirpur. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-sm hover:text-background transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-sm hover:text-background transition-colors">
-              Terms of Service
-            </a>
-          </div>
+        <div className="border-t border-footer-foreground/20 pt-4 text-sm flex flex-col md:flex-row justify-center items-center gap-4">
+            © 2026 Hult Prize at NIT Hamirpur. All rights reserved.
         </div>
       </div>
     </footer>
