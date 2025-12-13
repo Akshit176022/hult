@@ -1,0 +1,103 @@
+import { motion } from "framer-motion";
+import { Heart, Trophy, Users, BookOpen } from "lucide-react";
+
+const features = [
+  {
+    icon: Trophy,
+    title: "Global Competition",
+    description:
+      "Compete with 200,000+ students across 150+ countries to showcase your innovative social impact solutions.",
+  },
+  {
+    icon: Users,
+    title: "Build Your Team",
+    description:
+      "Form teams, network with peers, and collaborate with mentors from leading organizations worldwide.",
+  },
+  {
+    icon: BookOpen,
+    title: "Win Big Prizes",
+    description:
+      "Win up to $1 million in funding, accelerator spots, and global recognition for your social enterprise.",
+  },
+];
+
+const benefits = [
+  "Access to industry experts and mentors",
+  "Networking opportunities with global leaders",
+  "Real-world entrepreneurship experience",
+  "Recognition on an international platform",
+];
+
+const About = () => {
+  return (
+    <section id="about" className="py-24 bg-background">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <div className="section-badge mx-auto mb-6">
+            <Heart className="w-4 h-4" />
+            <span>Learn More</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+            About Hult Prize
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Hult Prize is the world's largest student-run social entrepreneurship competition
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
+          {features.map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="feature-card"
+            >
+              <div className="icon-badge mb-4">
+                <feature.icon className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3">{feature.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-primary rounded-3xl p-8 md:p-12 text-primary-foreground"
+        >
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            Why Join Hult Prize at NIT Hamirpur?
+          </h3>
+          <p className="text-primary-foreground/90 mb-6 max-w-3xl">
+            Be part of a prestigious competition that has launched numerous successful social
+            enterprises. Get mentorship, exposure, and the opportunity to turn your ideas into
+            real-world impact.
+          </p>
+          <ul className="grid md:grid-cols-2 gap-3">
+            {benefits.map((benefit, index) => (
+              <li key={index} className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-primary-foreground" />
+                <span className="text-primary-foreground/90">{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
