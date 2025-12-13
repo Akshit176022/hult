@@ -4,11 +4,13 @@ import { cn } from "@/lib/utils";
 
 // Placeholder images - replace with actual event images
 const images = [
-  "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&h=600&fit=crop",
-  "https://images.unsplash.com/photo-1559223607-a43c990c692c?w=800&h=600&fit=crop",
+  "../../public/gallery/01.JPG",
+  "../../public/gallery/03.JPG",
+  "../../public/gallery/04.JPG",
+  "../../public/gallery/05.JPG",
+  "../../public/gallery/06.JPG",
+  "../../public/gallery/07.JPG",
+  "../../public/gallery/08.JPG",
 ];
 
 const EventGallery = () => {
