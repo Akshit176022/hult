@@ -76,12 +76,12 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-primary rounded-3xl p-8 md:p-12 text-primary-foreground"
+          className="bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-[#F55589] via-blue-200 to-black/50 dark:bg- text-black dark:text-white rounded-3xl p-8 md:p-12"
         >
           <h3 className="text-3xl md:text-4xl font-bold mb-4">
             Why Join Hult Prize at NIT Hamirpur?
           </h3>
-          <p className="text-primary-foreground/90 md:text-lg mb-6 max-w-3xl">
+          <p className="text-black dark:text-white md:text-lg mb-6 max-w-3xl">
             Be part of a prestigious competition that has launched numerous successful social
             enterprises. Get mentorship, exposure, and the opportunity to turn your ideas into
             real-world impact.
@@ -90,29 +90,19 @@ const About = () => {
             {benefits.map((benefit, index) => (
               <li key={index} className="flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-primary-foreground" />
-                <span className="text-primary-foreground/90 md:text-lg">{benefit}</span>
+                <span className="text-black dark:text-white md:text-lg">{benefit}</span>
               </li>
             ))}
           </ul>
 
-        </motion.div
-        >
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="
-              mt-8 mx-auto w-fit rounded-3xl bg-primary px-8 py-5 text-center text-primary-foreground shadow-lg shadow-primary/30"
         > 
-          <span className="block text-base md:text-lg font-medium opacity-90">
-            Prizes Worth
-          </span>
-
-          <span className="block text-2xl md:text-4xl font-extrabold tracking-tight">
-            ₹30K+
-          </span>
         </motion.div>
       </div>
     </section>

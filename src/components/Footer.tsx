@@ -27,13 +27,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold text-background mb-4">Quick Links</h4>
+            <h4 className="font-semibold text-footer-foreground mb-4">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-sm hover:text-background transition-colors"
+                    className="text-sm text-footer-foreground/80 hover:text-footer-foreground transition-colors"
                   >
                     {link.name}
                   </a>
@@ -43,13 +43,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold text-background mb-4">Socials</h4>
+            <h4 className="font-semibold text-footer-foreground mb-4">Socials</h4>
             <ul className="space-y-3">
               {socialsLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-sm hover:text-background transition-colors"
+                    className="text-sm text-footer-foreground/80 hover:text-footer-foreground transition-colors"
                   >
                     {link.name}
                   </a>

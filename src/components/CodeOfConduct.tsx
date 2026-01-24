@@ -99,20 +99,6 @@ const CodeOfConduct = () => {
             </ul>
           </motion.div>
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-secondary rounded-3xl p-8"
-        >
-          <h4 className="text-xl font-bold text-foreground mb-3">Enforcement</h4>
-          <p className="text-muted-foreground leading-relaxed">
-            Violations of this Code of Conduct may result in disqualification from the
-            competition and other appropriate actions. We are committed to ensuring a safe,
-            inclusive, and professional environment for all participants.
-          </p>
-        </motion.div>
       </div>
     </section>
   );

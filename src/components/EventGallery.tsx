@@ -56,10 +56,19 @@ const EventGallery = () => {
   const rightIndex = getIndex(currentIndex + 1);
 
   return (
-    <section className="py-20 bg-secondary overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-secondary overflow-hidden relative gallery-gradient">
+      {/* Background Gradient Decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-primary/20 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-1/12 left-1/10 w-[500px] h-[500px] rounded-full blur-3xl gallery-radial-gradient" />
+        <div className="absolute top-1/12 right-1/20 w-100 h-100 bg-gradient-to-br from-pink-400/15 to-purple-400/15 rounded-full blur-2xl" />
+        <div className="absolute bottom-1/12 left-1/15 w-64 h-64 bg-gradient-to-tl from-purple-400/15 to-pink-400/15 rounded-full blur-2xl" />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 text-foreground">
           <span className="section-badge mb-4">
             <span className="w-2 h-2 rounded-full bg-primary" />
             Gallery
@@ -142,8 +151,8 @@ const EventGallery = () => {
               className={cn(
                 "w-2.5 h-2.5 rounded-full transition-all duration-300",
                 getIndex(currentIndex) === index
-                  ? "bg-primary w-8"
-                  : "bg-primary/30 hover:bg-primary/50"
+                  ? "bg-white w-8"
+                  : "bg-gray-400 hover:bg-primary/50"
               )}
               aria-label={`Go to image ${index + 1}`}
             />

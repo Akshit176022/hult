@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import useIsMobile from "../hooks/use-mobile";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -25,7 +26,7 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="fixed top-0 left-0 right-0 z-[60] bg-background/95 backdrop-blur-md shadow-sm"
+        className="fixed top-0 left-0 right-0 z-60 bg-pink-100/80 dark:bg-[hsl(280_25%_10%)]/80 backdrop-blur-md shadow-sm border-b border-border/50"
       >
         <div className="container mx-auto px-6 py-4 flex items-center justify-between relative">
           {/* LEFT: Logo */}
@@ -67,7 +68,7 @@ const Navbar = () => {
           </div>
 
           {/* RIGHT: Desktop nav + mobile hamburger */}
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4">
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
@@ -81,9 +82,12 @@ const Navbar = () => {
               ))}
             </div>
 
+            {/* Theme Toggle */}
+            <ThemeToggle />
+
             {/* Hamburger / Close */}
             <button
-              className="md:hidden z-[70] text-black dark:text-white"
+              className="md:hidden z-70 text-foreground"
               onClick={() => setIsOpen((prev) => !prev)}
               aria-label="Toggle menu"
               aria-expanded={isOpen}
@@ -126,7 +130,7 @@ const Navbar = () => {
               animate={{ opacity: 0.4 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black z-[40] md:hidden"
+              className="fixed inset-0 bg-black/40 dark:bg-black/60 z-40 md:hidden"
             />
 
             {/* Menu */}
@@ -135,7 +139,7 @@ const Navbar = () => {
               animate={{ y: 0 }}
               exit={{ y: "-100%" }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="fixed top-0 left-0 right-0 bg-background z-[50] md:hidden pt-24 pb-8 px-6 shadow-lg"
+              className="fixed top-0 left-0 right-0 bg-background z-50 md:hidden pt-24 pb-8 px-6 shadow-lg"
             >
               <div className="flex flex-col gap-6">
                 {navLinks.map((link) => (
