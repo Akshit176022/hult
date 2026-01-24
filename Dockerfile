@@ -1,28 +1,37 @@
-FROM node:20-alpine AS build
+# Stage 1: Build the application
+FROM node:20-alpine AS builder
 
-# Set the working directory inside the container
+# Set the working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the container
+# Copy package files
 COPY package*.json ./
+COPY pnpm-lock.yaml* ./
 
 # Install dependencies
-RUN npm install
+RUN npm install -g pnpm
+RUN pnpm install --frozen-lockfile
 
-# Copy the rest of the application code
+# Copy the rest of the application
 COPY . .
 
-# Build the application for production
-RUN npm run build
+# Build the application
+RUN pnpm run build
 
-# Stage 2: Serve the application with Nginx
-FROM nginx:alpine AS production
+# Stage 2: Production image
+FROM nginx:alpine
 
-# Copy the built files from the build stage to Nginx's serving directory
-COPY --from=build /app/dist /usr/share/nginx/html
+# Remove default nginx static assets
+RUN rm -rf /usr/share/nginx/html/*
 
-# Expose port 80 (default Nginx port)
+# Copy built assets from builder stage to nginx
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Copy custom nginx config if you have one
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port 80
 EXPOSE 80
 
-# Nginx starts automatically by default
+# Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
