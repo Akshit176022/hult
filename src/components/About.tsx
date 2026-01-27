@@ -97,10 +97,10 @@ const About = () => {
             successful social enterprises. Get mentorship, exposure, and the
             opportunity to turn your ideas into real-world impact.
           </p>
-          <ul className="grid md:grid-cols-2 gap-3 list-none custom-bullet">
+          <ul className="grid md:grid-cols-2 gap-3">
             {benefits.map((benefit, index) => (
               <li key={index} className="flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-primary-foreground" />
+                <span className="w-2 h-2 rounded-full bg-primary" />
                 <span className="text-black dark:text-white md:text-lg">
                   {benefit}
                 </span>
