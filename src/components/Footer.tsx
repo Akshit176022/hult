@@ -9,7 +9,7 @@ const quickLinks = [
 ];
 
 const socialsLinks = [
-  { name: "Instagram", href: "https://www.instagram.com/teamistenith" },
+  { name: "Instagram", href: "https://www.instagram.com/hultistenith?igsh=MWNjaDBpejI0bWNkcg==" },
   { name: "LinkedIn", href: "https://www.linkedin.com/company/iste-nith" },
 ];
 

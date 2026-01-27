@@ -6,19 +6,19 @@ const features = [
     icon: Trophy,
     title: "Global Competition",
     description:
-    "Compete with 200,000+ students across 150+ countries to showcase your innovative social impact solutions.",
+      "Compete with 200,000+ students across 150+ countries to showcase your innovative social impact solutions.",
   },
   {
     icon: Users,
     title: "Build Your Team",
     description:
-    "Form teams, network with peers, and collaborate with mentors from leading organizations worldwide.",
+      "Form teams, network with peers, and collaborate with mentors from leading organizations worldwide.",
   },
   {
     icon: BookOpen,
     title: "Win Big Prizes",
     description:
-    "Win up to $1 million in funding, accelerator spots, and global recognition for your social enterprise.",
+      "Win up to $1 million in funding, accelerator spots, and global recognition for your social enterprise.",
   },
 ];
 
@@ -48,7 +48,14 @@ const About = () => {
             About Hult Prize
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            The Hult Prize is the world's largest student startup competition focused on social entrepreneurship, aimed at creating measurable social and environmental impact. It brings together young innovators from over 130 countries, with tens of thousands of participants annually, offering not only funding but also access to mentorship, investor networks, global visibility, and a lifelong community of changemakers. The final winning team is awarded a $1 million prize to launch their social venture.
+            The Hult Prize is the world's largest student startup competition
+            focused on social entrepreneurship, aimed at creating measurable
+            social and environmental impact. It brings together young innovators
+            from over 130 countries, with tens of thousands of participants
+            annually, offering not only funding but also access to mentorship,
+            investor networks, global visibility, and a lifelong community of
+            changemakers. The final winning team is awarded a $1 million prize
+            to launch their social venture.
           </p>
         </motion.div>
 
@@ -65,8 +72,12 @@ const About = () => {
               <div className="icon-badge mb-4">
                 <feature.icon className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                {feature.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -82,19 +93,20 @@ const About = () => {
             Why Join Hult Prize at NIT Hamirpur?
           </h3>
           <p className="text-black dark:text-white md:text-lg mb-6 max-w-3xl">
-            Be part of a prestigious competition that has launched numerous successful social
-            enterprises. Get mentorship, exposure, and the opportunity to turn your ideas into
-            real-world impact.
+            Be part of a prestigious competition that has launched numerous
+            successful social enterprises. Get mentorship, exposure, and the
+            opportunity to turn your ideas into real-world impact.
           </p>
-          <ul className="grid md:grid-cols-2 gap-3">
+          <ul className="grid md:grid-cols-2 gap-3 list-none custom-bullet">
             {benefits.map((benefit, index) => (
               <li key={index} className="flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-primary-foreground" />
-                <span className="text-black dark:text-white md:text-lg">{benefit}</span>
+                <span className="text-black dark:text-white md:text-lg">
+                  {benefit}
+                </span>
               </li>
             ))}
           </ul>
-
         </motion.div>
 
         <motion.div
@@ -102,8 +114,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-        > 
-        </motion.div>
+        ></motion.div>
       </div>
     </section>
   );

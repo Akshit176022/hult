@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "next-themes";
 import useIsMobile from "../hooks/use-mobile";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -13,6 +14,8 @@ const navLinks = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useIsMobile();
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
 
   // Close mobile menu when switching to desktop
   useEffect(() => {
@@ -33,9 +36,9 @@ const Navbar = () => {
           <div className="flex items-center gap-3">
             {/* Mobile-only favicon */}
             <img
-              src="favicon.webp"
+              src={isDark ? "/favicon-white.png" : "/favicon.png"}
               alt="Hult Logo"
-              className="w-8 h-8 object-contain md:hidden"
+              className="w-8 h-8 object-contain md:hidden scale-175"
             />
 
             <a
@@ -50,9 +53,9 @@ const Navbar = () => {
           <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-3">
             <div className="w-10 h-10">
               <img
-                src="favicon.webp"
-                alt="Logo 1"
-                className="w-full h-full object-contain"
+                src={isDark ? "/favicon-white.png" : "/favicon.png"}
+                alt="Hult Logo"
+                className="w-full h-full pr-4 object-contain scale-400"
               />
             </div>
 
@@ -60,9 +63,9 @@ const Navbar = () => {
 
             <div className="w-10 h-10">
               <img
-                src="iste.webp"
+                src="iste.png"
                 alt="Logo 2"
-                className="w-full h-full object-contain"
+                className="ml-6 w-full h-full object-contain scale-125"
               />
             </div>
           </div>

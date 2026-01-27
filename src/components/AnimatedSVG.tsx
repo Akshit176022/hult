@@ -65,7 +65,7 @@ const AnimatedSVG = ({ className = '' }: { className?: string }) => {
         viewBox="-1 -1 103 103"
         fill="none"
         strokeWidth="2.2"
-        className="mb-14 w-12 h-12 md:w-10 md:h-10 lg:w-40 lg:h-40 bold overflow-visible opacity-0 inline-block align-middle"
+        className="mb-8 lg:mb-12 w-18 h-18 lg:w-40 lg:h-40 bold overflow-visible opacity-0 inline-block align-middle"
       >
         <defs>
           <linearGradient
@@ -77,12 +77,12 @@ const AnimatedSVG = ({ className = '' }: { className?: string }) => {
             gradientUnits="userSpaceOnUse"
           >
             <stop offset="0.2" stopColor="rgba(209, 5, 120, 0.83)" />
-            <stop offset="0.8" stopColor="rgba(232, 229, 229, 1)" className='dark:bg-white'/>
+            <stop offset="0.8" stopColor="rgba(232, 229, 229, 1)"/>
           </linearGradient>
         </defs>
         <path
           ref={pathRef}
-          stroke="url(#grad-1)"
+          stroke="currentColor"
           d="M50.5 50.5h50v50s-19.2 1.3-37.2-16.7S56 35.4 35.5 15.5C18.5-1 .5.5.5.5v50h50s25.6-.6 38-18 12-32 12-32h-50v100H.5S.2 80.7 11.8 68.2 40 49.7 50.5 50.5Z"
         />
       </svg>

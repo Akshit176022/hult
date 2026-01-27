@@ -26,8 +26,8 @@ const contactInfo = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 hero-gradient">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-24 hero-gradient ">
+      <div className="container mx-auto px-6 overflow-x-hidden">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -12,7 +12,7 @@ const steps = [
     id: 2,
     icon: Target,
     title: "Solve a Problem",
-    description: "Develop a for-profit, for-good business idea using design thinking.",
+    description: "Develop a for-profit, for-good business idea targeting at least one sustainable development goal.",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const steps = [
 
 const GettingStarted = () => {
   return (
-    <section id="getting-started" className="py-24 bg-background">
+    <section id="getting-started" className="py-24 px-10 bg-background">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -22,7 +22,7 @@ const donts = [
 const CodeOfConduct = () => {
   return (
     <section id="conduct" className="py-24 bg-background">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 overflow-x-hidden">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

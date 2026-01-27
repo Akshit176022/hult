@@ -1,23 +1,49 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+/* Meteor head color override for theme reliability */
+.meteor-head {
+  background: #000 !important;
+  box-shadow:
+    0 0 6px #000,
+    0 0 12px #ff66cc,
+    0 0 18px #ff66cc,
+    0 0 24px rgba(255, 102, 204, 0.5) !important;
+}
+.dark .meteor-head {
+  background: #fff !important;
+  box-shadow:
+    0 0 6px #fff,
+    0 0 12px #ff66cc,
+    0 0 18px #ff66cc,
+    0 0 24px rgba(255, 102, 204, 0.5) !important;
+}
 @layer components {
+  @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap");
+  .font-rubik {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+  }
+  .font-montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+  }
 
+  @font-face {
+    font-family: "Grotesk";
+    src: url("/grotesk.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: "Grotesk";
-  src: url("/grotesk.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Zentry";
-  src: url("/zentry-regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@import "tailwindcss";
+  @font-face {
+    font-family: "Zentry";
+    src: url("/zentry-regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @import "tailwindcss";
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -98,7 +124,6 @@
     }
   }
 }
-
 
 @layer base {
   :root {
@@ -499,6 +524,14 @@
       hsl(var(--primary) / 0.08) 50%,
       transparent 100%
     );
+  }
+
+  .custom-bullet li::before {
+    content: "●"; /* Unicode for a bullet */
+    color: #b368b7; /* Custom green color */
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
   }
 
   @keyframes gradient-shift {
