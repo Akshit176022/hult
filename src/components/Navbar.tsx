@@ -53,7 +53,7 @@ const Navbar = () => {
           <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-3">
             <div className="w-10 h-10">
               <img
-                src={isDark ? "/favicon-white.png" : "/favicon.png"}
+                 src={isDark ? "/hult/favicon-white.png" : "/hult/favicon.png"}
                 alt="Hult Logo"
                 className="w-full h-full pr-4 object-contain scale-400"
               />

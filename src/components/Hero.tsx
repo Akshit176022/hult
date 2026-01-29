@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { useEffect } from "react";
 import { useRef } from "react";
+import heroImage from "/hero.png";
 
 import { Button } from "@/components/ui/button";
 import AnimatedSVG from "./AnimatedSVG";
@@ -125,7 +126,7 @@ const Hero = () => {
             <div className="relative z-10">
               <BentoTilt>
                 <img
-                  src="/hero.png"
+                  src={heroImage}
                   alt="Hult Prize"
                   className="w-full max-w-lg lg:max-w-full h-auto object-contain rounded-4xl scale-100"
                 />
