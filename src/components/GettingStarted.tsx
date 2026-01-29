@@ -6,7 +6,7 @@ const steps = [
     id: 1,
     icon: Users,
     title: "Form a Team",
-    description: "Connect with 2-3 other eligible students and register your team.",
+    description: "Build a team of 2-4 members and register your team.",
   },
   {
     id: 2,
