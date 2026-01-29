@@ -6,7 +6,7 @@ const timelineEvents = [
     id: 1,
     title: "Round 1",
     subtitle: "Shortlisting Round",
-    date: "4th February",
+    date: "5th February",
     icon: Presentation,
     description: "Participants must submit a presentation proposing an idea that addresses at least one Sustainable Development Goal before the specified deadline.",
   },
