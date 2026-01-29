@@ -36,7 +36,7 @@ const Navbar = () => {
           <div className="flex items-center gap-3">
             {/* Mobile-only favicon */}
             <img
-              src={isDark ? "/favicon-white.png" : "/favicon.png"}
+              src={isDark ? "/hult/favicon-white.png" : "/hult/favicon.png"}
               alt="Hult Logo"
               className="w-8 h-8 object-contain md:hidden scale-175"
             />
