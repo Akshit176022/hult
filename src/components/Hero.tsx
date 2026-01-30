@@ -13,7 +13,6 @@ import { BentoTilt } from "./BentoTilt";
 import { RollingText } from "./RollingText";
 import { Meteors } from "@/components/ui/meteors";
 
-
 const Hero = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
 
@@ -61,11 +60,13 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-4xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight"
             >
-              <span className="text-6xl md:text-6xl lg:text-8xl text-transparent bg-linear-to-r from-[#ff5589] to-gray-400 dark:from-[#ff66cc] dark:to-white bg-clip-text font-rubik">
-                ISTE
-              </span>
-              <AnimatedSVG className="ml-2 -mb-1 md:ml-3 lg:ml-8 text-black/70 dark:text-white/80" /> <br />{" "}
-              Brings To You The <br />
+              <span className="whitespace-nowrap">
+                <span className="text-6xl md:text-6xl lg:text-8xl text-transparent bg-linear-to-r from-[#ff5589] to-gray-400 dark:from-[#ff66cc] dark:to-white bg-clip-text font-rubik">
+                  ISTE
+                </span>
+                <AnimatedSVG className="ml-2 -mb-1 md:ml-3 lg:ml-8 text-black/70 dark:text-white/80" />
+              </span>{" "}
+              <br /> Brings To You The <br />
               <span className="inline-flex items-center gap-3 md:gap-4 text-4xl md:text-5xl lg:text-8xl">
                 <span className="text-transparent bg-clip-text font-montserrat">
                   <RollingText
@@ -76,7 +77,7 @@ const Hero = () => {
                     className="font-bold font-montserrat"
                   />
                 </span>
-        
+
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-[#F55589] to-black/70 dark:from-[#ff66cc] dark:to-white/70 font-montserrat">
                   <RollingText
                     text="PRIZE"
@@ -97,7 +98,7 @@ const Hero = () => {
               id="animation"
               className="text-xl md:text-2xl text-muted-foreground max-w-2xl lg:text-3xl mb-10"
             >
-              Stand a chance to win $ 1 Million 
+              Stand a chance to win $ 1 Million
             </motion.p>
 
             <motion.div
@@ -128,7 +129,7 @@ const Hero = () => {
                 <img
                   src={heroImage}
                   alt="Hult Prize"
-                  className="w-full max-w-lg lg:max-w-full h-auto object-contain rounded-4xl scale-100"
+                  className="w-full max-w-lg lg:max-w-full h-auto object-contain rounded-4xl scale-125 lg:scale-100 shadow-2xl"
                 />
               </BentoTilt>
             </div>
