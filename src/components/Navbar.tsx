@@ -31,9 +31,9 @@ const Navbar = () => {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="fixed top-0 left-0 right-0 z-60 bg-pink-100/80 dark:bg-[hsl(280_25%_10%)]/80 backdrop-blur-md shadow-sm border-b border-border/50"
       >
-        <div className="container mx-auto px-5 py-3 lg:py-4">
+        <div className="container mx-auto px-5 py-3 lg:py-4 relative">
           {/* Use grid for proper spacing */}
-          <div className="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+          <div className="flex items-center justify-between gap-4">
             {/* LEFT: Logo */}
             <div className="flex items-center gap-3">
               {/* Mobile-only favicon */}
@@ -52,7 +52,7 @@ const Navbar = () => {
             </div>
 
             {/* CENTER: Logos + Divider (desktop only) */}
-            <div className="hidden md:flex items-center justify-center gap-3">
+            <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-3">
               <div className="w-10 h-10">
                 <img
                   src={isDark ? "/hult/favicon-white.png" : "/hult/favicon.png"}
@@ -75,7 +75,7 @@ const Navbar = () => {
             {/* RIGHT: Desktop nav + mobile hamburger */}
             <div className="flex items-center gap-4 justify-end">
               {/* Desktop Nav */}
-              <div className="hidden lg:flex items-center gap-4 xl:gap-8 justify-end">
+              <div className="hidden lg:flex items-center gap-4 xl:gap-8 justify-end ml-auto">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}

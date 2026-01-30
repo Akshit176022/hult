@@ -66,7 +66,7 @@ const Hero = () => {
                 </span>
                 <AnimatedSVG className="ml-2 -mb-1 md:ml-3 lg:ml-8 text-black/70 dark:text-white/80" />
               </span>{" "}
-              <br /> Brings To You The <br />
+              <br /> <span className="whitespace-nowrap">Brings To You The</span> <br />
               <span className="inline-flex items-center gap-3 md:gap-4 text-4xl md:text-5xl lg:text-8xl">
                 <span className="text-transparent bg-clip-text font-montserrat">
                   <RollingText
@@ -96,7 +96,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               id="animation"
-              className="text-xl md:text-2xl text-muted-foreground max-w-2xl lg:text-3xl mb-10"
+              className="text-xl md:text-2xl text-muted-foreground max-w-2xl lg:text-3xl mb-10 lg:whitespace-nowrap"
             >
               Stand a chance to win $ 1 Million
             </motion.p>
@@ -129,7 +129,7 @@ const Hero = () => {
                 <img
                   src={heroImage}
                   alt="Hult Prize"
-                  className="w-full max-w-lg lg:max-w-full h-auto object-contain rounded-4xl scale-125 lg:scale-100 shadow-2xl"
+                  className="w-full max-w-lg lg:max-w-full lg:ml-10 h-auto object-contain rounded-4xl scale-125 lg:scale-125 shadow-2xl"
                 />
               </BentoTilt>
             </div>
